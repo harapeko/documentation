@@ -464,7 +464,7 @@ The number of `metrics` sent to the DogStatsD client by your application (before
 `datadog.dogstatsd.client.metrics_by_type`
 : **Metric type**: count<br>
 The number of `metrics` sent by the DogStatsD client, before sampling and aggregation, tagged by metric type (`gauge`,
-`set`, `count`, `timing`, `histogram` or `distribution`). Starting with version `5.0.0` of the Go client.
+`set`, `count`, `timing`, `histogram`, or `distribution`). Starting with v5.0.0 of the Go client.
 
 `datadog.dogstatsd.client.events`
 : **Metric type**: count<br>
