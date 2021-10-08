@@ -45,7 +45,7 @@ Here are some example datagrams:
 ### DogStatsD protocol 1.1
 
 Starting with the Agent `>=v6.25.0` && `<v7.0.0` or `>=v7.25.0`, value packing is possible. This
-is supported for all metrics type except for SET. Values are separated by a `:`.
+is supported for all metric types except `SET`. Values are separated by a `:`, for example:
 
 `<METRIC_NAME>:<VALUE1>:<VALUE2>:<VALUE3>|<TYPE>|@<SAMPLE_RATE>|#<TAG_KEY_1>:<TAG_VALUE_1>,<TAG_2>`
 
