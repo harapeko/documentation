@@ -57,7 +57,6 @@ client side.
 
 - `page.views:1:2:32|c`: Increment the `page.views` COUNT metric three times with values `1`, `2` and `32`.
 - `song.length:240:234|h|@0.5`: Sample the `song.length` histogram as if it was sent half of the time, twice. Each
-  values have the sample rate of `0.5` applied to them.
 
 [1]: /metrics/#naming-metrics
 [2]: /metrics/types/
