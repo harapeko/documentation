@@ -520,7 +520,7 @@ The total number of contexts flushed by the client when client side aggregation 
 `datadog.dogstatsd.client.aggregated_context_by_type`
 : **Metric type**: count<br>
 The total number of contexts flushed by the client, when client side aggregation is enabled, tagged by metric type (`gauge`, `set`, `count`, `timing`,
-`histogram` or `distribution`). Starting version `5.0.0` of the Go client.
+`histogram`, or `distribution`). Starting v5.0.0 of the Go client.
 
 
 To disable telemetry, use the `WithoutTelemetry` setting:
