@@ -53,7 +53,7 @@ is supported for all metric types except `SET`. Values are separated by a `:`, f
 messages with one value in each. This is useful for HISTOGRAM, TIMING, and DISTRIBUTION which can't be aggregated on the
 client side.
 
-Here are some example datagrams:
+### Example datagrams
 
 - `page.views:1:2:32|c` : Increment the `page.views` COUNT metric 3 times with values `1`, `2` and `32`.
 - `song.length:240:234|h|@0.5`: Sample the `song.length` histogram as if it was sent half of the time, twice. Each
