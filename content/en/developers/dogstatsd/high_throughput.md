@@ -213,7 +213,7 @@ UDS is an inter-process communication protocol used to [transport DogStatsD payl
 
 ### Client side aggregation
 
-Client side aggregation is only available in the Go client for now (starting with version `5.0.0`).
+Client side aggregation is only available in the Go client starting with v5.0.0.
 
 See [Client side aggregation][7] for more information.
 
