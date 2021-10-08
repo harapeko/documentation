@@ -511,7 +511,7 @@ The number of datagrams dropped because of an error while writing to Datadog due
 `datadog.dogstatsd.client.metric_dropped_on_receive` 
 : **Metric type**: count<br>
 The number of metrics dropped because the internal receiving channel is full (when using `WithChannelMode()`). Starting
-with version `3.6.0` of the Go client when `WithChannelMode()` is enabled.
+with v3.6.0 of the Go client when `WithChannelMode()` is enabled.
 
 `datadog.dogstatsd.client.aggregated_context`
 : **Metric type**: count<br>
