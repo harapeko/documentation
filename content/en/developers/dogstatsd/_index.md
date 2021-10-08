@@ -462,7 +462,7 @@ For the full list of optional parameters, see the [dogstatsd-ruby repo][1] on Gi
 {{< /programming-lang >}}
 {{< programming-lang lang="go" >}}
 
-The Go client as multiple option allowing you to configure the behavior of your client.
+The Go client has multiple options for configuring the behavior of your client.
 
 | Parameter                     | Type            | Description                                                                  |
 | ----------------------------- | --------------- | ---------------------------------------------------------------------------- |
