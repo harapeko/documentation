@@ -49,7 +49,7 @@ is supported for all metrics type except for SET. Values are separated by a `:`.
 
 `<METRIC_NAME>:<VALUE1>:<VALUE2>:<VALUE3>|<TYPE>|@<SAMPLE_RATE>|#<TAG_KEY_1>:<TAG_VALUE_1>,<TAG_2>`
 
-`TYPE`, `SAMPLE_RATE` and `TAGS` are shared between all values. This will produce the same metrics than sending multiple
+`TYPE`, `SAMPLE_RATE`, and `TAGS` are shared between all values. This produces the same metrics than sending multiple
 messages with 1 value in each. This is useful for HISTOGRAM, TIMING and DISTRIBUTION which can't be aggregated on the
 client side.
 
