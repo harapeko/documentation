@@ -9718,7 +9718,8 @@ components:
       properties:
         assertions:
           default: []
-          description: Array of assertions used for the test.
+          description: Array of assertions used for the test. Required for single
+            API tests.
           example: []
           items:
             $ref: '#/components/schemas/SyntheticsAssertion'
@@ -10287,29 +10288,7 @@ components:
             type: string
           type: array
         metadata:
-          description: Metadata for the Synthetics tests run
-          properties:
-            ci:
-              description: Describe CI provider.
-              properties:
-                pipeline:
-                  description: Name of the pipeline.
-                  type: string
-                provider:
-                  description: Name of the CI provider.
-                  type: string
-              type: object
-            git:
-              description: Git information.
-              properties:
-                branch:
-                  description: Branch name.
-                  type: string
-                commit_sha:
-                  description: Commit SHA.
-                  type: string
-              type: object
-          type: object
+          $ref: '#/components/schemas/SyntheticsCITestMetadata'
         public_id:
           description: The public ID of the Synthetics test to trigger.
           example: aaa-aaa-aaa
@@ -10336,6 +10315,46 @@ components:
           items:
             $ref: '#/components/schemas/SyntheticsCITest'
           type: array
+      type: object
+    SyntheticsCITestMetadata:
+      description: Metadata for the Synthetics tests run.
+      properties:
+        ci:
+          $ref: '#/components/schemas/SyntheticsCITestMetadataCI'
+        git:
+          $ref: '#/components/schemas/SyntheticsCITestMetadataGit'
+      type: object
+    SyntheticsCITestMetadataCI:
+      description: Describe CI metadata.
+      properties:
+        pipeline:
+          $ref: '#/components/schemas/SyntheticsCITestMetadataPipeline'
+        provider:
+          $ref: '#/components/schemas/SyntheticsCITestMetadataProvider'
+      type: object
+    SyntheticsCITestMetadataGit:
+      description: Git information.
+      properties:
+        branch:
+          description: Branch name.
+          type: string
+        commitSha:
+          description: The commit SHA.
+          type: string
+      type: object
+    SyntheticsCITestMetadataPipeline:
+      description: Description of the CI pipeline.
+      properties:
+        url:
+          description: Name of the pipeline.
+          type: string
+      type: object
+    SyntheticsCITestMetadataProvider:
+      description: Description of the CI provider.
+      properties:
+        name:
+          description: Name of the CI provider.
+          type: string
       type: object
     SyntheticsCheckType:
       description: Type of assertion to apply in an API test.
